@@ -1,0 +1,1865 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Invitation | Imteyaz & Reza</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap');
+
+:root{
+  --green:#03130e;
+  --green2:#082c20;
+  --green3:#0d4532;
+  --gold:#d7b46a;
+  --gold2:#f0d58e;
+  --cream:#f7f0dc;
+  --muted:#cfc6ae;
+  --line:rgba(215,180,106,.3);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Inter',Arial,sans-serif;
+  --urdu:'Noto Naskh Arabic',serif;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--green);
+  color:var(--cream);
+  font-family:var(--sans);
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button{
+  font:inherit;
+}
+
+/* ================= HEADER ================= */
+
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  min-height:70px;
+  padding:14px 4vw;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:linear-gradient(
+    180deg,
+    rgba(3,19,14,.97),
+    rgba(3,19,14,.6),
+    transparent
+  );
+  backdrop-filter:blur(8px);
+}
+
+.logo{
+  color:var(--gold2);
+  font-family:var(--serif);
+  font-size:1.25rem;
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+.logo span{
+  font-size:1.7rem;
+}
+
+nav{
+  display:flex;
+  gap:30px;
+}
+
+nav a{
+  font-size:.72rem;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  color:var(--muted);
+  transition:.3s;
+}
+
+nav a:hover{
+  color:var(--gold2);
+}
+
+.language{
+  display:flex;
+  align-items:center;
+  gap:7px;
+}
+
+.language button{
+  background:none;
+  border:0;
+  color:var(--muted);
+  cursor:pointer;
+  font-size:.72rem;
+}
+
+.language button.active,
+.language button:hover{
+  color:var(--gold2);
+}
+
+.menu{
+  display:none;
+  background:none;
+  border:0;
+  cursor:pointer;
+}
+
+.menu span{
+  display:block;
+  width:25px;
+  height:1px;
+  background:var(--gold2);
+  margin:6px;
+}
+
+/* ================= COMMON ================= */
+
+section{
+  position:relative;
+  overflow:hidden;
+}
+
+.kicker{
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  font-size:.68rem;
+  font-weight:600;
+}
+
+h2{
+  font-family:var(--serif);
+  font-size:clamp(2.8rem,5vw,4.7rem);
+  font-weight:500;
+  line-height:.95;
+}
+
+.section-heading{
+  text-align:center;
+  max-width:760px;
+  margin:0 auto 45px;
+}
+
+.section-heading h2{
+  margin:12px 0 16px;
+}
+
+.section-heading p{
+  color:var(--muted);
+  line-height:1.7;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  min-height:100vh;
+  min-height:100svh;
+  display:grid;
+  place-items:center;
+  text-align:center;
+
+  background:
+    radial-gradient(
+      circle at 50% 28%,
+      rgba(31,105,76,.42),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(12,69,50,.75),
+      transparent 55%
+    ),
+    linear-gradient(
+      135deg,
+      #020e0a,
+      #06271c 55%,
+      #03150f
+    );
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:6%;
+  border:1px solid var(--line);
+  pointer-events:none;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  opacity:.2;
+  background:
+    linear-gradient(
+      45deg,
+      transparent 49.5%,
+      rgba(215,180,106,.08) 50%,
+      transparent 50.5%
+    );
+  background-size:70px 70px;
+}
+
+.hero-content{
+  width:min(1000px,90vw);
+  position:relative;
+  z-index:5;
+  padding-top:45px;
+}
+
+.bismillah{
+  font-family:var(--urdu);
+  direction:rtl;
+  color:var(--gold2);
+  font-size:1.55rem;
+  margin:10px 0;
+}
+
+.invite-label{
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  font-size:.68rem;
+}
+
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(4rem,8.5vw,8rem);
+  font-weight:500;
+  line-height:.82;
+  letter-spacing:-.04em;
+  margin-top:12px;
+}
+
+.hero h1 i{
+  color:var(--gold);
+  font-style:normal;
+  font-size:.55em;
+  margin:0 10px;
+}
+
+.subtitle{
+  margin-top:25px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:18px;
+  font-family:var(--serif);
+  font-size:clamp(1.4rem,2.2vw,2rem);
+  color:#e7dcc2;
+}
+
+.diamond{
+  color:var(--gold);
+  font-size:.45em;
+}
+
+.divider{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:15px;
+  margin:22px 0 15px;
+  color:var(--gold);
+}
+
+.divider::before,
+.divider::after{
+  content:"";
+  width:100px;
+  height:1px;
+  background:var(--gold);
+  opacity:.5;
+}
+
+.message{
+  width:min(720px,90%);
+  margin:auto;
+  padding:20px 28px;
+  border:1px solid var(--line);
+  background:rgba(2,18,13,.5);
+  box-shadow:0 15px 50px rgba(0,0,0,.2);
+}
+
+.message p{
+  font-family:var(--serif);
+  font-size:1.2rem;
+  line-height:1.5;
+}
+
+.urdu{
+  font-family:var(--urdu);
+  direction:rtl;
+  line-height:2;
+}
+
+.ur-text{
+  display:none;
+}
+
+.gold-btn{
+  display:inline-flex;
+  gap:15px;
+  align-items:center;
+  margin-top:23px;
+  padding:13px 24px;
+  border:1px solid var(--gold);
+  color:var(--gold2);
+  font-size:.7rem;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+  transition:.3s;
+}
+
+.gold-btn:hover{
+  background:var(--gold);
+  color:var(--green);
+}
+
+/* Moon */
+
+.moon{
+  position:absolute;
+  right:9%;
+  top:17%;
+  font-size:clamp(4rem,7vw,7rem);
+  color:var(--gold2);
+  opacity:.7;
+  filter:drop-shadow(0 0 18px rgba(240,213,142,.3));
+  z-index:2;
+}
+
+/* Lantern */
+
+.lantern{
+  position:absolute;
+  color:var(--gold);
+  font-size:3rem;
+  opacity:.55;
+  animation:sway 5s ease-in-out infinite;
+  z-index:4;
+}
+
+.lantern::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:-100px;
+  width:1px;
+  height:100px;
+  background:var(--gold);
+}
+
+.lantern.one{
+  left:8%;
+  top:30%;
+}
+
+.lantern.two{
+  right:9%;
+  top:43%;
+  animation-delay:-2s;
+}
+
+/* Mosque */
+
+.mosque{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  height:23vh;
+  opacity:.35;
+  z-index:1;
+}
+
+.mosque-body{
+  position:absolute;
+  bottom:0;
+  left:18%;
+  right:18%;
+  height:48%;
+  background:#020b08;
+}
+
+.dome{
+  position:absolute;
+  bottom:29%;
+  left:37%;
+  width:26%;
+  height:53%;
+  border-radius:100% 100% 0 0;
+  background:#020b08;
+}
+
+.minaret{
+  position:absolute;
+  bottom:0;
+  width:3.5%;
+  height:80%;
+  background:#020b08;
+}
+
+.minaret.one{
+  left:12%;
+}
+
+.minaret.two{
+  right:12%;
+}
+
+.minaret::before{
+  content:"";
+  position:absolute;
+  left:-20%;
+  top:0;
+  width:140%;
+  height:5%;
+  background:#020b08;
+}
+
+.scroll{
+  position:absolute;
+  bottom:18px;
+  left:50%;
+  transform:translateX(-50%);
+  color:var(--muted);
+  font-size:.6rem;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  z-index:6;
+}
+
+/* ================= INTRO ================= */
+
+.intro{
+  padding:110px 7vw;
+  background:linear-gradient(180deg,var(--green),var(--green2));
+}
+
+.countdown{
+  max-width:900px;
+  margin:auto;
+  padding:25px;
+  border:1px solid var(--line);
+  background:rgba(8,43,31,.65);
+  box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
+
+.next{
+  text-align:center;
+  color:var(--muted);
+  font-size:.7rem;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+
+.next strong{
+  color:var(--gold2);
+  font-family:var(--serif);
+  font-size:1.3rem;
+  margin-left:8px;
+  letter-spacing:0;
+  text-transform:none;
+}
+
+.timer{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  margin-top:22px;
+}
+
+.timer div{
+  text-align:center;
+  border-left:1px solid var(--line);
+}
+
+.timer div:first-child{
+  border-left:0;
+}
+
+.timer strong{
+  display:block;
+  font-family:var(--serif);
+  font-size:3.5rem;
+  color:var(--gold2);
+}
+
+.timer span{
+  font-size:.6rem;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.15em;
+}
+
+/* ================= COUPLE ================= */
+
+.couple{
+  padding:110px 7vw;
+  background:
+    radial-gradient(
+      circle at 15% 50%,
+      rgba(25,91,65,.32),
+      transparent 32%
+    ),
+    var(--green);
+}
+
+.couple-card{
+  max-width:1150px;
+  margin:auto;
+  padding:50px;
+  border:1px solid var(--line);
+  background:rgba(8,43,31,.65);
+  box-shadow:0 25px 70px rgba(0,0,0,.3);
+
+  display:grid;
+  grid-template-columns:1fr 1.5fr 1fr;
+  align-items:center;
+  gap:45px;
+}
+
+.number{
+  font-family:var(--serif);
+  font-size:7rem;
+  color:rgba(215,180,106,.13);
+}
+
+.couple h2{
+  margin:12px 0;
+}
+
+.couple h2 em{
+  color:var(--gold);
+  font-style:normal;
+}
+
+.couple p{
+  color:var(--muted);
+  line-height:1.7;
+}
+
+.couple .urdu{
+  color:var(--gold2);
+  font-size:1.35rem;
+  margin-bottom:12px;
+}
+
+.photo{
+  min-height:230px;
+  border:1px solid var(--line);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  color:var(--gold);
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(215,180,106,.04) 0 1px,
+      transparent 1px 18px
+    );
+}
+
+.photo span{
+  font-size:3.5rem;
+}
+
+.photo small{
+  color:var(--muted);
+  font-size:.6rem;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+}
+
+/* ================= TIMELINE ================= */
+
+.timeline-section{
+  padding:110px 7vw;
+  background:var(--green2);
+}
+
+.timeline{
+  max-width:1100px;
+  margin:auto;
+  position:relative;
+}
+
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  bottom:0;
+  width:1px;
+  background:linear-gradient(
+    transparent,
+    var(--gold),
+    transparent
+  );
+}
+
+.event{
+  width:calc(50% - 38px);
+  margin-bottom:35px;
+  position:relative;
+}
+
+.event:nth-child(odd){
+  margin-right:auto;
+}
+
+.event:nth-child(even){
+  margin-left:auto;
+}
+
+.event::after{
+  content:"";
+  position:absolute;
+  top:28px;
+  width:13px;
+  height:13px;
+  border:1px solid var(--gold);
+  background:var(--green2);
+  transform:rotate(45deg);
+}
+
+.event:nth-child(odd)::after{
+  right:-46px;
+}
+
+.event:nth-child(even)::after{
+  left:-46px;
+}
+
+.event-box{
+  padding:25px;
+  border:1px solid var(--line);
+  background:rgba(3,24,17,.75);
+  transition:.35s;
+}
+
+.event-box:hover{
+  transform:translateY(-5px);
+  border-color:var(--gold);
+  box-shadow:0 18px 45px rgba(0,0,0,.3);
+}
+
+.date{
+  font-size:.65rem;
+  color:var(--gold);
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+
+.day{
+  font-family:var(--serif);
+  font-size:1.2rem;
+  color:var(--muted);
+}
+
+.event-name{
+  font-family:var(--serif);
+  font-size:2rem;
+  margin:8px 0 2px;
+}
+
+.time{
+  color:var(--gold2);
+  font-size:.75rem;
+}
+
+.event-urdu{
+  display:none;
+  font-family:var(--urdu);
+  direction:rtl;
+  color:var(--muted);
+  font-size:1.1rem;
+}
+
+.event.next-event .event-box{
+  border-color:var(--gold);
+}
+
+/* ================= CALENDAR ================= */
+
+.calendar{
+  padding:110px 7vw;
+  background:var(--green);
+}
+
+.calendar-grid{
+  max-width:1150px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
+
+.calendar-item{
+  display:grid;
+  grid-template-columns:90px 1fr auto;
+  gap:20px;
+  align-items:center;
+  padding:18px;
+  border:1px solid var(--line);
+  background:rgba(8,43,31,.5);
+}
+
+.cal-date{
+  font-family:var(--serif);
+  color:var(--gold2);
+  font-size:1.7rem;
+}
+
+.cal-date small{
+  display:block;
+  color:var(--muted);
+  font-family:var(--sans);
+  font-size:.55rem;
+}
+
+.cal-title{
+  font-family:var(--serif);
+  font-size:1.35rem;
+}
+
+.cal-couple{
+  color:var(--muted);
+  font-size:.6rem;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+}
+
+.cal-time{
+  color:var(--gold);
+  font-size:.65rem;
+}
+
+/* ================= FINAL INVITATION ================= */
+
+.final{
+  min-height:75vh;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  padding:100px 7vw;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(34,108,77,.45),
+      transparent 45%
+    ),
+    linear-gradient(
+      145deg,
+      #03160f,
+      #0a3527,
+      #03140e
+    );
+}
+
+.final::before{
+  content:"";
+  position:absolute;
+  width:min(800px,80vw);
+  aspect-ratio:1;
+  border:1px solid var(--line);
+  transform:rotate(45deg);
+}
+
+.final-box{
+  max-width:850px;
+  padding:55px;
+  border:1px solid rgba(215,180,106,.6);
+  background:rgba(2,19,13,.65);
+  position:relative;
+  z-index:3;
+  box-shadow:0 25px 80px rgba(0,0,0,.35);
+}
+
+.final-box h2{
+  margin:15px 0 28px;
+}
+
+.final-message{
+  font-family:var(--serif);
+  font-size:1.35rem;
+  line-height:1.5;
+}
+
+.signature{
+  margin-top:30px;
+  color:var(--muted);
+}
+
+.signature strong{
+  display:block;
+  color:var(--gold2);
+  font-family:var(--serif);
+  font-size:1.4rem;
+  margin-top:5px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  text-align:center;
+  padding:45px 20px 35px;
+  background:#020c08;
+  border-top:1px solid rgba(215,180,106,.15);
+}
+
+.credit{
+  font-family:var(--serif);
+  font-size:1.5rem;
+  color:var(--gold2);
+}
+
+.credit strong{
+  animation:glow 3s infinite;
+}
+
+footer p{
+  margin:6px 0 16px;
+  color:var(--muted);
+  font-size:.68rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+footer small{
+  color:#756d5d;
+}
+
+/* ================= ANIMATIONS ================= */
+
+.fade{
+  opacity:0;
+  transform:translateY(25px);
+  transition:.8s ease;
+}
+
+.fade.show{
+  opacity:1;
+  transform:none;
+}
+
+@keyframes sway{
+  0%,100%{transform:rotate(-3deg) translateY(0)}
+  50%{transform:rotate(3deg) translateY(8px)}
+}
+
+@keyframes glow{
+  0%,100%{text-shadow:none}
+  50%{
+    text-shadow:
+      0 0 15px rgba(240,213,142,.5);
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+  nav{
+    position:absolute;
+    top:65px;
+    left:4vw;
+    right:4vw;
+    display:none;
+    flex-direction:column;
+    gap:0;
+    padding:10px;
+    background:rgba(2,19,13,.97);
+    border:1px solid var(--line);
+  }
+
+  nav.open{
+    display:flex;
+  }
+
+  nav a{
+    padding:13px;
+    border-bottom:1px solid rgba(215,180,106,.08);
+  }
+
+  .menu{
+    display:block;
+  }
+
+  .couple-card{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .number{
+    position:absolute;
+    right:20px;
+    top:10px;
+  }
+
+  .photo{
+    order:-1;
+  }
+
+  .couple p{
+    max-width:600px;
+    margin:auto;
+  }
+
+  .calendar-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:650px){
+
+  header{
+    padding:12px 5vw;
+  }
+
+  .hero{
+    min-height:800px;
+    padding:100px 0 70px;
+  }
+
+  .hero h1{
+    font-size:clamp(3rem,14vw,5rem);
+  }
+
+  .hero h1 span{
+    display:block;
+  }
+
+  .hero h1 i{
+    display:block;
+    margin:8px;
+  }
+
+  .subtitle{
+    flex-direction:column;
+    gap:4px;
+  }
+
+  .moon{
+    opacity:.3;
+    top:12%;
+  }
+
+  .lantern{
+    display:none;
+  }
+
+  .intro,
+  .couple,
+  .timeline-section,
+  .calendar,
+  .final{
+    padding:75px 5vw;
+  }
+
+  .timer strong{
+    font-size:2rem;
+  }
+
+  .timer span{
+    font-size:.48rem;
+  }
+
+  .couple-card{
+    padding:35px 22px;
+  }
+
+  .couple h2{
+    font-size:2.8rem;
+  }
+
+  .timeline::before{
+    left:9px;
+  }
+
+  .event{
+    width:calc(100% - 28px);
+    margin-left:28px !important;
+    margin-right:0 !important;
+  }
+
+  .event::after{
+    left:-25px !important;
+    right:auto !important;
+  }
+
+  .calendar-item{
+    grid-template-columns:70px 1fr;
+    gap:12px;
+  }
+
+  .cal-time{
+    grid-column:2;
+  }
+
+  .final-box{
+    padding:40px 22px;
+  }
+
+  .final-message{
+    font-size:1.15rem;
+  }
+
+  .credit{
+    font-size:1.2rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+  <a href="#home" class="logo">
+    <span>☾</span>
+    Wedding Invitation
+  </a>
+
+  <nav id="nav">
+    <a href="#home">Home</a>
+    <a href="#imteyaz">Imteyaz</a>
+    <a href="#reza">Reza</a>
+    <a href="#events">Events</a>
+    <a href="#invitation">Invitation</a>
+  </nav>
+
+  <div class="language">
+    <button class="active" onclick="setLanguage('en')">English</button>
+    <span>|</span>
+    <button onclick="setLanguage('ur')">اردو</button>
+
+    <button class="menu" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+  <div class="moon">☾</div>
+
+  <div class="lantern one">✧</div>
+  <div class="lantern two">✧</div>
+
+  <div class="mosque">
+    <div class="mosque-body"></div>
+    <div class="dome"></div>
+    <div class="minaret one"></div>
+    <div class="minaret two"></div>
+  </div>
+
+  <div class="hero-content fade">
+
+    <div class="kicker">
+      In the name of Allah, the Most Gracious, the Most Merciful
+    </div>
+
+    <div class="bismillah">
+      بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+    </div>
+
+    <div class="invite-label">
+      With joy in our hearts, we invite you to celebrate
+    </div>
+
+    <h1>
+      <span>Imteyaz Ansari</span>
+      <i>&amp;</i>
+      <span>Md Reza</span>
+    </h1>
+
+    <div class="subtitle">
+      <span>Mussarat Jahan</span>
+      <span class="diamond">◆</span>
+      <span>Raushani Khatoon</span>
+    </div>
+
+    <div class="divider">☾</div>
+
+    <div class="message">
+
+      <p class="en-text">
+        You are warmly invited to celebrate the joyous wedding ceremonies
+        of our beloved brothers. Your presence and blessings will make
+        these special moments even more memorable.
+      </p>
+
+      <p class="ur-text urdu">
+        آپ کو ہمارے پیارے بھائیوں کی پُرمسرت شادی کی تقریبات میں
+        دل کی گہرائیوں سے مدعو کیا جاتا ہے۔ آپ کی شرکت اور دعائیں
+        ان خاص لمحات کو مزید یادگار بنا دیں گی۔
+      </p>
+
+    </div>
+
+    <a href="#invitation" class="gold-btn">
+      View Invitation ↓
+    </a>
+
+  </div>
+
+  <div class="scroll">
+    Scroll to explore
+  </div>
+
+</section>
+
+
+<!-- ================= INTRO ================= -->
+
+<section class="intro">
+
+  <div class="section-heading fade">
+
+    <div class="kicker">
+      A Celebration of Love & Family
+    </div>
+
+    <h2>
+      Two Weddings, One Beautiful Celebration
+    </h2>
+
+    <p>
+      Two brothers, two beautiful beginnings, and a gathering filled
+      with faith, family, blessings and joy. We would be honored to
+      have you with us throughout these memorable celebrations.
+    </p>
+
+  </div>
+
+  <div class="countdown fade">
+
+    <div class="next">
+      Next Celebration:
+      <strong id="nextEvent">Loading...</strong>
+    </div>
+
+    <div class="timer">
+
+      <div>
+        <strong id="days">00</strong>
+        <span>Days</span>
+      </div>
+
+      <div>
+        <strong id="hours">00</strong>
+        <span>Hours</span>
+      </div>
+
+      <div>
+        <strong id="minutes">00</strong>
+        <span>Minutes</span>
+      </div>
+
+      <div>
+        <strong id="seconds">00</strong>
+        <span>Seconds</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= IMTEYAZ ================= -->
+
+<section class="couple" id="imteyaz">
+
+  <div class="couple-card fade">
+
+    <div class="number">01</div>
+
+    <div>
+
+      <div class="kicker">
+        The Wedding of
+      </div>
+
+      <h2>
+        Imteyaz Ansari
+        <em>&amp;</em>
+        Mussarat Jahan
+      </h2>
+
+      <p class="urdu">
+        امتیاز انصاری ♥ مسرت جہاں
+      </p>
+
+      <p>
+        A beautiful journey of two hearts, celebrated with prayers,
+        family, tradition and happiness.
+      </p>
+
+    </div>
+
+    <div class="photo">
+      <span>☾</span>
+      <small>Wedding Photo</small>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= IMTEYAZ EVENTS ================= -->
+
+<section class="timeline-section" id="events">
+
+  <div class="section-heading fade">
+
+    <div class="kicker">
+      01 · Imteyaz & Mussarat
+    </div>
+
+    <h2>Wedding Events</h2>
+
+    <p>
+      Moments of faith, celebration and togetherness.
+    </p>
+
+  </div>
+
+  <div class="timeline" id="imteyazTimeline"></div>
+
+</section>
+
+
+<!-- ================= REZA ================= -->
+
+<section class="couple" id="reza">
+
+  <div class="couple-card fade">
+
+    <div class="photo">
+      <span>☾</span>
+      <small>Wedding Photo</small>
+    </div>
+
+    <div>
+
+      <div class="kicker">
+        The Wedding of
+      </div>
+
+      <h2>
+        Md Reza
+        <em>&amp;</em>
+        Raushani Khatoon
+      </h2>
+
+      <p class="urdu">
+        محمد رضا ♥ روشنی خاتون
+      </p>
+
+      <p>
+        A new chapter begins with duas, loved ones and the warmth
+        of a beautiful family celebration.
+      </p>
+
+    </div>
+
+    <div class="number">02</div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= REZA EVENTS ================= -->
+
+<section class="timeline-section">
+
+  <div class="section-heading fade">
+
+    <div class="kicker">
+      02 · Reza & Raushani
+    </div>
+
+    <h2>Wedding Events</h2>
+
+    <p>
+      Moments of faith, celebration and togetherness.
+    </p>
+
+  </div>
+
+  <div class="timeline" id="rezaTimeline"></div>
+
+</section>
+
+
+<!-- ================= COMBINED CALENDAR ================= -->
+
+<section class="calendar">
+
+  <div class="section-heading fade">
+
+    <div class="kicker">
+      The Complete Journey
+    </div>
+
+    <h2>
+      Combined Wedding Calendar
+    </h2>
+
+    <p>
+      Keep these beautiful dates close as both celebrations unfold.
+    </p>
+
+  </div>
+
+  <div class="calendar-grid" id="calendar"></div>
+
+</section>
+
+
+<!-- ================= FINAL INVITATION ================= -->
+
+<section class="final" id="invitation">
+
+  <div class="final-box fade">
+
+    <div class="kicker">
+      A Special Invitation
+    </div>
+
+    <h2>
+      Your Presence Is Our Blessing
+    </h2>
+
+    <div class="final-message">
+
+      <p class="en-text">
+        Your presence will make our celebration complete.
+        We warmly invite you and your family to join us and bless
+        the newly married couples.
+      </p>
+
+      <p class="ur-text urdu">
+        آپ کی موجودگی ہماری خوشی کو مکمل کر دے گی۔
+        ہم آپ کو اور آپ کے اہلِ خانہ کو دل کی گہرائیوں سے دعوت دیتے ہیں
+        کہ تشریف لائیں اور نئے شادی شدہ جوڑوں کو اپنی دعاؤں سے نوازیں۔
+      </p>
+
+    </div>
+
+    <div class="signature">
+      With warm regards & duas
+      <strong>Family & Loved Ones</strong>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <div class="credit">
+    &lt;
+    <strong>Created by Md Firdaus</strong>
+    /&gt;
+  </div>
+
+  <p>
+    Student of Computer Science and Engineering
+  </p>
+
+  <small>
+    © 2026 · Made with faith, family & love
+  </small>
+
+</footer>
+
+
+<script>
+
+/* =========================================
+   WEDDING EVENTS
+========================================= */
+
+const events = [
+
+  {
+    wedding:"Imteyaz & Mussarat",
+    date:"2026-11-02T19:00:00+05:30",
+    dateText:"02 NOVEMBER 2026",
+    day:"Monday",
+    name:"Milad-un-Nabi",
+    urdu:"میلاد النبی ﷺ",
+    time:"7:00 PM — 9:00 PM"
+  },
+
+  {
+    wedding:"Imteyaz & Mussarat",
+    date:"2026-11-03T12:00:00+05:30",
+    dateText:"03 NOVEMBER 2026",
+    day:"Tuesday",
+    name:"Dawat",
+    urdu:"دعوت",
+    time:"From 12:00 PM"
+  },
+
+  {
+    wedding:"Imteyaz & Mussarat",
+    date:"2026-11-03T19:00:00+05:30",
+    dateText:"03 NOVEMBER 2026",
+    day:"Tuesday",
+    name:"Barat Leaves From Home",
+    urdu:"بارات گھر سے روانہ",
+    time:"7:00 PM"
+  },
+
+  {
+    wedding:"Imteyaz & Mussarat",
+    date:"2026-11-04T00:00:00+05:30",
+    dateText:"04 NOVEMBER 2026",
+    day:"Wednesday",
+    name:"Nikah",
+    urdu:"نکاح",
+    time:"12:00 AM"
+  },
+
+  {
+    wedding:"Imteyaz & Mussarat",
+    date:"2026-11-04T07:00:00+05:30",
+    dateText:"04 NOVEMBER 2026",
+    day:"Wednesday",
+    name:"Barat Returns",
+    urdu:"بارات صبح واپسی",
+    time:"Morning"
+  },
+
+  {
+    wedding:"Reza & Raushani",
+    date:"2026-11-04T19:00:00+05:30",
+    dateText:"04 NOVEMBER 2026",
+    day:"Wednesday",
+    name:"Milad-un-Nabi",
+    urdu:"میلاد النبی ﷺ",
+    time:"7:00 PM — 9:00 PM"
+  },
+
+  {
+    wedding:"Reza & Raushani",
+    date:"2026-11-05T20:00:00+05:30",
+    dateText:"05 NOVEMBER 2026",
+    day:"Thursday",
+    name:"Barat Leaves From Home",
+    urdu:"بارات گھر سے روانہ",
+    time:"8:00 PM"
+  },
+
+  {
+    wedding:"Reza & Raushani",
+    date:"2026-11-06T00:00:00+05:30",
+    dateText:"06 NOVEMBER 2026",
+    day:"Friday",
+    name:"Nikah",
+    urdu:"نکاح",
+    time:"12:00 AM"
+  },
+
+  {
+    wedding:"Reza & Raushani",
+    date:"2026-11-06T05:00:00+05:30",
+    dateText:"06 NOVEMBER 2026",
+    day:"Friday",
+    name:"Barat Returns",
+    urdu:"بارات صبح ۵ بجے واپسی",
+    time:"5:00 AM"
+  }
+
+];
+
+
+/* =========================================
+   FIND NEXT EVENT
+========================================= */
+
+function getNextEvent(){
+
+  const now = Date.now();
+
+  return events.find(event =>
+    new Date(event.date).getTime() > now
+  );
+
+}
+
+
+/* =========================================
+   EVENT CARD
+========================================= */
+
+function eventCard(event){
+
+  const next = getNextEvent();
+
+  const isNext =
+    next &&
+    next.date === event.date;
+
+  const isPast =
+    new Date(event.date).getTime() <= Date.now();
+
+  return `
+
+    <article class="event ${isPast ? "past" : ""} ${isNext ? "next-event" : ""}">
+
+      <div class="event-box">
+
+        <div class="date">
+          ${event.dateText}
+        </div>
+
+        <div class="day">
+          ${event.day}
+        </div>
+
+        <div class="event-name">
+          ${event.name}
+        </div>
+
+        <div class="time">
+          ${event.time}
+        </div>
+
+        <div class="event-urdu">
+          ${event.urdu}
+        </div>
+
+      </div>
+
+    </article>
+
+  `;
+
+}
+
+
+/* =========================================
+   RENDER EVENTS
+========================================= */
+
+function renderEvents(){
+
+  const imteyaz =
+    document.getElementById("imteyazTimeline");
+
+  const reza =
+    document.getElementById("rezaTimeline");
+
+  imteyaz.innerHTML =
+    events
+    .filter(e => e.wedding === "Imteyaz & Mussarat")
+    .map(eventCard)
+    .join("");
+
+  reza.innerHTML =
+    events
+    .filter(e => e.wedding === "Reza & Raushani")
+    .map(eventCard)
+    .join("");
+
+}
+
+
+/* =========================================
+   CALENDAR
+========================================= */
+
+function renderCalendar(){
+
+  const calendar =
+    document.getElementById("calendar");
+
+  calendar.innerHTML = events.map(event => {
+
+    const parts =
+      event.dateText.split(" ");
+
+    return `
+
+      <div class="calendar-item">
+
+        <div class="cal-date">
+          ${parts[0]}
+          <small>
+            ${parts.slice(1).join(" ")}
+          </small>
+        </div>
+
+        <div>
+
+          <div class="cal-title">
+            ${event.name}
+          </div>
+
+          <div class="cal-couple">
+            ${event.wedding}
+          </div>
+
+        </div>
+
+        <div class="cal-time">
+          ${event.time}
+        </div>
+
+      </div>
+
+    `;
+
+  }).join("");
+
+}
+
+
+/* =========================================
+   COUNTDOWN
+========================================= */
+
+function countdown(){
+
+  const event = getNextEvent();
+
+  if(!event){
+
+    document.getElementById("nextEvent")
+      .textContent = "All celebrations completed";
+
+    return;
+
+  }
+
+  document.getElementById("nextEvent")
+    .textContent =
+    event.name + " · " + event.wedding;
+
+
+  const difference =
+    new Date(event.date).getTime()
+    - Date.now();
+
+
+  const totalSeconds =
+    Math.max(0,Math.floor(difference / 1000));
+
+
+  const days =
+    Math.floor(totalSeconds / 86400);
+
+  const hours =
+    Math.floor(
+      (totalSeconds % 86400) / 3600
+    );
+
+  const minutes =
+    Math.floor(
+      (totalSeconds % 3600) / 60
+    );
+
+  const seconds =
+    totalSeconds % 60;
+
+
+  document.getElementById("days")
+    .textContent =
+    String(days).padStart(2,"0");
+
+  document.getElementById("hours")
+    .textContent =
+    String(hours).padStart(2,"0");
+
+  document.getElementById("minutes")
+    .textContent =
+    String(minutes).padStart(2,"0");
+
+  document.getElementById("seconds")
+    .textContent =
+    String(seconds).padStart(2,"0");
+
+}
+
+
+/* =========================================
+   LANGUAGE SWITCHER
+========================================= */
+
+function setLanguage(language){
+
+  const english =
+    document.querySelectorAll(".en-text");
+
+  const urdu =
+    document.querySelectorAll(".ur-text");
+
+  const eventUrdu =
+    document.querySelectorAll(".event-urdu");
+
+
+  if(language === "ur"){
+
+    english.forEach(x =>
+      x.style.display = "none"
+    );
+
+    urdu.forEach(x =>
+      x.style.display = "block"
+    );
+
+    eventUrdu.forEach(x =>
+      x.style.display = "block"
+    );
+
+  }else{
+
+    english.forEach(x =>
+      x.style.display = "block"
+    );
+
+    urdu.forEach(x =>
+      x.style.display = "none"
+    );
+
+    eventUrdu.forEach(x =>
+      x.style.display = "none"
+    );
+
+  }
+
+
+  document
+    .querySelectorAll(".language button")
+    .forEach(button =>
+      button.classList.remove("active")
+    );
+
+
+  if(language === "ur"){
+
+    document
+      .querySelectorAll(".language button")[1]
+      .classList.add("active");
+
+    document.documentElement.dir = "rtl";
+
+  }else{
+
+    document
+      .querySelectorAll(".language button")[0]
+      .classList.add("active");
+
+    document.documentElement.dir = "ltr";
+
+  }
+
+}
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+function toggleMenu(){
+
+  document
+    .getElementById("nav")
+    .classList.toggle("open");
+
+}
+
+
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+const observer =
+new IntersectionObserver(
+  entries => {
+
+    entries.forEach(entry => {
+
+      if(entry.isIntersecting){
+
+        entry.target.classList.add("show");
+
+      }
+
+    });
+
+  },
+  {
+    threshold:.12
+  }
+);
+
+
+document
+  .querySelectorAll(".fade")
+  .forEach(element =>
+    observer.observe(element)
+  );
+
+
+/* =========================================
+   INITIALIZE
+========================================= */
+
+renderEvents();
+
+renderCalendar();
+
+countdown();
+
+setInterval(countdown,1000);
+
+</script>
+
+</body>
+</html>
+```
